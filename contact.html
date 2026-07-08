@@ -4,219 +4,249 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Ziva Cosmetics</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+
+<body class="bg-pink-50 text-gray-800">
 
     <!-- Header -->
-    <header>
+    <header class="bg-pink-600 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
 
-        <h1>ZIVA COSMETICS</h1>
+            <h1 class="text-3xl font-bold text-white">
+                ZIVA COSMETICS
+            </h1>
 
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="products.html">Products</a> |
-            <a href="cart.html">Cart</a> |
-            <a href="about.html">About Us</a> |
-            <a href="contact.html">Contact Us</a> |
-            <a href="login.html">Login</a> |
-            <a href="signup.html">Sign Up</a>
-        </nav>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex flex-wrap gap-6 text-white font-medium">
+                    <li><a href="index.html" class="hover:text-pink-200">Home</a></li>
+                    <li><a href="products.html" class="hover:text-pink-200">Products</a></li>
+                    <li><a href="cart.html" class="hover:text-pink-200">Cart</a></li>
+                    <li><a href="about.html" class="hover:text-pink-200">About</a></li>
+                    <li><a href="contact.html" class="text-pink-200 font-bold">Contact</a></li>
+                    <li><a href="login.html" class="hover:text-pink-200">Login</a></li>
+                    <li><a href="signup.html" class="hover:text-pink-200">Sign Up</a></li>
+                </ul>
+            </nav>
 
-        <hr>
-
+        </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-pink-100 to-pink-200 py-16">
 
-        <h2>Contact Us</h2>
+        <div class="max-w-6xl mx-auto px-6 text-center">
 
-        <p>
-            We'd love to hear from you! Whether you have questions about our
-            products, orders, or services, our team is here to help.
-        </p>
+            <h2 class="text-5xl font-bold mb-4">
+                Contact Us
+            </h2>
 
-        <hr>
+            <p class="text-lg text-gray-700">
+                We'd love to hear from you! Send us your questions, feedback, or inquiries.
+            </p>
 
-        <h3>Send Us a Message</h3>
+        </div>
 
-        <form action="#" method="post">
+    </section>
 
-            <table>
+    <!-- Contact Form -->
+    <section class="max-w-6xl mx-auto py-16 px-6">
 
-                <tr>
-                    <td><label for="name">Full Name</label></td>
-                </tr>
+        <div class="grid lg:grid-cols-2 gap-10">
 
-                <tr>
-                    <td>
+            <!-- Form -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+
+                <h3 class="text-3xl font-bold text-pink-600 mb-8">
+                    Send Us a Message
+                </h3>
+
+                <form class="space-y-6">
+
+                    <div>
+                        <label class="block mb-2 font-semibold">Full Name</label>
                         <input
                             type="text"
-                            id="name"
-                            name="name"
                             placeholder="Enter your full name"
+                            class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none"
                             required>
-                    </td>
-                </tr>
+                    </div>
 
-                <tr><td><br></td></tr>
-
-                <tr>
-                    <td><label for="email">Email Address</label></td>
-                </tr>
-
-                <tr>
-                    <td>
+                    <div>
+                        <label class="block mb-2 font-semibold">Email Address</label>
                         <input
                             type="email"
-                            id="email"
-                            name="email"
                             placeholder="Enter your email"
+                            class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none"
                             required>
-                    </td>
-                </tr>
+                    </div>
 
-                <tr><td><br></td></tr>
-
-                <tr>
-                    <td><label for="phone">Mobile Number</label></td>
-                </tr>
-
-                <tr>
-                    <td>
+                    <div>
+                        <label class="block mb-2 font-semibold">Mobile Number</label>
                         <input
                             type="tel"
-                            id="phone"
-                            name="phone"
                             placeholder="Enter your mobile number"
+                            class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none"
                             required>
-                    </td>
-                </tr>
+                    </div>
 
-                <tr><td><br></td></tr>
-
-                <tr>
-                    <td><label for="subject">Subject</label></td>
-                </tr>
-
-                <tr>
-                    <td>
+                    <div>
+                        <label class="block mb-2 font-semibold">Subject</label>
                         <input
                             type="text"
-                            id="subject"
-                            name="subject"
                             placeholder="Enter subject"
+                            class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none"
                             required>
-                    </td>
-                </tr>
+                    </div>
 
-                <tr><td><br></td></tr>
-
-                <tr>
-                    <td><label for="message">Message</label></td>
-                </tr>
-
-                <tr>
-                    <td>
+                    <div>
+                        <label class="block mb-2 font-semibold">Message</label>
                         <textarea
-                            id="message"
-                            name="message"
                             rows="6"
-                            cols="40"
                             placeholder="Write your message here..."
+                            class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none"
                             required></textarea>
-                    </td>
-                </tr>
+                    </div>
 
-                <tr><td><br></td></tr>
+                    <div class="flex gap-4">
 
-                <tr>
-                    <td>
-                        <input type="submit" value="Send Message">
-                        <input type="reset" value="Clear">
-                    </td>
-                </tr>
+                        <button
+                            type="submit"
+                            class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-lg transition">
+                            Send Message
+                        </button>
 
-            </table>
+                        <button
+                            type="reset"
+                            class="bg-gray-500 hover:bg-gray-600 text-white px-8 py-3 rounded-lg transition">
+                            Clear
+                        </button>
 
-        </form>
+                    </div>
 
-        <hr>
+                </form>
 
-        <h3>Customer Support</h3>
+            </div>
 
-        <table border="1" cellpadding="10">
+            <!-- Contact Information -->
+            <div class="space-y-8">
 
-            <tr>
-                <th>Department</th>
-                <th>Contact</th>
-            </tr>
+                <!-- Support -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
 
-            <tr>
-                <td>Customer Support</td>
-                <td>support@ziva.com</td>
-            </tr>
+                    <h3 class="text-2xl font-bold text-pink-600 mb-6">
+                        Customer Support
+                    </h3>
 
-            <tr>
-                <td>Sales</td>
-                <td>sales@ziva.com</td>
-            </tr>
+                    <div class="overflow-x-auto">
 
-            <tr>
-                <td>Phone</td>
-                <td>+91 9876543210</td>
-            </tr>
+                        <table class="w-full border">
 
-            <tr>
-                <td>Working Hours</td>
-                <td>Monday - Saturday (9:00 AM - 6:00 PM)</td>
-            </tr>
+                            <thead class="bg-pink-600 text-white">
 
-        </table>
+                                <tr>
+                                    <th class="p-3">Department</th>
+                                    <th class="p-3">Contact</th>
+                                </tr>
 
-        <hr>
+                            </thead>
 
-        <h3>Our Office</h3>
+                            <tbody>
 
-        <p><strong>Ziva Cosmetics</strong></p>
+                                <tr class="border-b">
+                                    <td class="p-3">Customer Support</td>
+                                    <td class="p-3">support@ziva.com</td>
+                                </tr>
 
-        <p>123 Beauty Street</p>
+                                <tr class="bg-pink-50 border-b">
+                                    <td class="p-3">Sales</td>
+                                    <td class="p-3">sales@ziva.com</td>
+                                </tr>
 
-        <p>Chennai, Tamil Nadu - 600001</p>
+                                <tr class="border-b">
+                                    <td class="p-3">Phone</td>
+                                    <td class="p-3">+91 9876543210</td>
+                                </tr>
 
-        <p>India</p>
+                                <tr class="bg-pink-50">
+                                    <td class="p-3">Working Hours</td>
+                                    <td class="p-3">Mon - Sat (9:00 AM - 6:00 PM)</td>
+                                </tr>
 
-        <hr>
+                            </tbody>
 
-        <h3>Quick Links</h3>
+                        </table>
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="cart.html">Shopping Cart</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-        </ul>
+                    </div>
 
-    </main>
+                </div>
 
-    <hr>
+                <!-- Office -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+
+                    <h3 class="text-2xl font-bold text-pink-600 mb-5">
+                        Our Office
+                    </h3>
+
+                    <p class="mb-2"><strong>Ziva Cosmetics</strong></p>
+                    <p>123 Beauty Street</p>
+                    <p>Chennai, Tamil Nadu - 600001</p>
+                    <p>India</p>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+
+                    <h3 class="text-2xl font-bold text-pink-600 mb-5">
+                        Quick Links
+                    </h3>
+
+                    <ul class="space-y-3">
+
+                        <li><a href="index.html" class="text-pink-600 hover:underline">🏠 Home</a></li>
+                        <li><a href="products.html" class="text-pink-600 hover:underline">🛍 Products</a></li>
+                        <li><a href="cart.html" class="text-pink-600 hover:underline">🛒 Shopping Cart</a></li>
+                        <li><a href="about.html" class="text-pink-600 hover:underline">ℹ About Us</a></li>
+                        <li><a href="login.html" class="text-pink-600 hover:underline">🔑 Login</a></li>
+                        <li><a href="signup.html" class="text-pink-600 hover:underline">👤 Sign Up</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-gray-900 text-white py-10">
 
-        <p><strong>Ziva Cosmetics</strong></p>
+        <div class="max-w-6xl mx-auto text-center">
 
-        <p>Your Trusted Beauty Partner</p>
+            <h2 class="text-2xl font-bold mb-4">
+                ZIVA COSMETICS
+            </h2>
 
-        <p>Email: support@ziva.com</p>
+            <p class="mb-2">
+                Your Trusted Beauty Partner
+            </p>
 
-        <p>Phone: +91 9876543210</p>
+            <p>Email: support@ziva.com</p>
 
-        <p>Address: Chennai, Tamil Nadu, India</p>
+            <p>Phone: +91 9876543210</p>
 
-        <p>&copy; 2026 Ziva Cosmetics. All Rights Reserved.</p>
+            <p>Address: Chennai, Tamil Nadu, India</p>
+
+            <p class="mt-5 text-gray-400">
+                © 2026 Ziva Cosmetics. All Rights Reserved.
+            </p>
+
+        </div>
 
     </footer>
 

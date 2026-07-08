@@ -4,181 +4,292 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Ziva Cosmetics</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+
+<body class="bg-pink-50 text-gray-800">
 
     <!-- Header -->
-    <header>
-        <h1>ZIVA COSMETICS</h1>
+    <header class="bg-pink-600 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
 
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="products.html">Products</a> |
-            <a href="cart.html">Cart</a> |
-            <a href="About.html">About Us</a> |
-            <a href="contact.html">Contact Us</a> |
-            <a href="login.html">Login</a> |
-            <a href="signup.html">Sign Up</a>
-        </nav>
+            <h1 class="text-3xl font-bold text-white">
+                ZIVA COSMETICS
+            </h1>
 
-        <hr>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex flex-wrap gap-6 text-white font-medium">
+                    <li><a href="index.html" class="hover:text-pink-200">Home</a></li>
+                    <li><a href="products.html" class="hover:text-pink-200">Products</a></li>
+                    <li><a href="cart.html" class="hover:text-pink-200">Cart</a></li>
+                    <li><a href="about.html" class="hover:text-pink-200">About</a></li>
+                    <li><a href="contact.html" class="hover:text-pink-200">Contact</a></li>
+                    <li><a href="login.html" class="hover:text-pink-200">Login</a></li>
+                    <li><a href="signup.html" class="hover:text-pink-200">Sign Up</a></li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-pink-100 to-pink-200 py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
 
-        <section>
-            <h2>About Ziva Cosmetics</h2>
+            <h2 class="text-5xl font-bold mb-6">
+                About Ziva Cosmetics
+            </h2>
 
-            <p>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                Your trusted destination for premium beauty and personal care
+                products designed to make everyone look and feel beautiful.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="max-w-6xl mx-auto py-16 px-6">
+
+        <div class="bg-white rounded-xl shadow-lg p-8">
+
+            <h2 class="text-3xl font-bold text-pink-600 mb-6">
+                Who We Are
+            </h2>
+
+            <p class="text-gray-700 leading-8 mb-5">
                 Welcome to <strong>Ziva Cosmetics</strong>, your trusted destination
                 for premium beauty and personal care products. We are passionate
                 about helping everyone feel confident by providing high-quality
                 skincare, makeup, hair care, fragrances, and wellness essentials.
             </p>
 
-            <p>
+            <p class="text-gray-700 leading-8">
                 Our products are carefully selected to meet the highest standards
                 of quality, safety, and effectiveness. Whether you are looking
                 for everyday beauty essentials or luxury cosmetic collections,
                 Ziva Cosmetics offers products that suit every style and budget.
             </p>
-        </section>
 
-        <hr>
+        </div>
 
-        <section>
+    </section>
 
-            <h2>Our Mission</h2>
+    <!-- Mission & Vision -->
+    <section class="max-w-6xl mx-auto px-6 pb-16">
 
-            <p>
-                Our mission is to make beauty accessible to everyone by offering
-                authentic, affordable, and premium cosmetic products while
-                providing an enjoyable online shopping experience.
-            </p>
+        <div class="grid md:grid-cols-2 gap-8">
 
-        </section>
+            <div class="bg-white shadow-lg rounded-xl p-8">
 
-        <hr>
+                <h2 class="text-2xl font-bold text-pink-600 mb-4">
+                    Our Mission
+                </h2>
 
-        <section>
+                <p class="leading-7 text-gray-700">
+                    Our mission is to make beauty accessible to everyone by
+                    offering authentic, affordable, and premium cosmetic
+                    products while providing an enjoyable online shopping
+                    experience.
+                </p>
 
-            <h2>Our Vision</h2>
+            </div>
 
-            <p>
-                To become one of the leading online beauty destinations by
-                delivering trusted products, excellent customer service, and
-                innovative shopping experiences for customers worldwide.
-            </p>
+            <div class="bg-white shadow-lg rounded-xl p-8">
 
-        </section>
+                <h2 class="text-2xl font-bold text-pink-600 mb-4">
+                    Our Vision
+                </h2>
 
-        <hr>
+                <p class="leading-7 text-gray-700">
+                    To become one of the leading online beauty destinations by
+                    delivering trusted products, excellent customer service,
+                    and innovative shopping experiences worldwide.
+                </p>
 
-        <section>
+            </div>
 
-            <h2>Why Choose Us?</h2>
+        </div>
 
-            <ul>
-                <li>100% Genuine Products</li>
-                <li>Wide Range of Cosmetics</li>
-                <li>Affordable Prices</li>
-                <li>Secure Online Shopping</li>
-                <li>Fast & Reliable Delivery</li>
-                <li>Easy Returns</li>
-                <li>Customer Support</li>
-            </ul>
+    </section>
 
-        </section>
+    <!-- Why Choose Us -->
+    <section class="bg-white py-16">
 
-        <hr>
+        <div class="max-w-6xl mx-auto px-6">
 
-        <section>
+            <h2 class="text-3xl font-bold text-center mb-10">
+                Why Choose Us?
+            </h2>
 
-            <h2>Our Product Categories</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            <ol>
-                <li>Skincare</li>
-                <li>Makeup</li>
-                <li>Hair Care</li>
-                <li>Fragrances</li>
-                <li>Body Care</li>
-                <li>Men's Grooming</li>
-                <li>Beauty Accessories</li>
-            </ol>
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    ✅
+                    <h3 class="font-semibold mt-3">100% Genuine Products</h3>
+                </div>
 
-        </section>
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    💄
+                    <h3 class="font-semibold mt-3">Wide Range of Cosmetics</h3>
+                </div>
 
-        <hr>
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    💰
+                    <h3 class="font-semibold mt-3">Affordable Prices</h3>
+                </div>
 
-        <section>
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    🔒
+                    <h3 class="font-semibold mt-3">Secure Shopping</h3>
+                </div>
 
-            <h2>Our Core Values</h2>
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    🚚
+                    <h3 class="font-semibold mt-3">Fast Delivery</h3>
+                </div>
 
-            <table border="1" cellpadding="10">
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    🔄
+                    <h3 class="font-semibold mt-3">Easy Returns</h3>
+                </div>
 
-                <tr>
-                    <th>Value</th>
-                    <th>Description</th>
-                </tr>
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    🎧
+                    <h3 class="font-semibold mt-3">24/7 Support</h3>
+                </div>
 
-                <tr>
-                    <td>Quality</td>
-                    <td>Providing premium and authentic beauty products.</td>
-                </tr>
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    ⭐
+                    <h3 class="font-semibold mt-3">Premium Quality</h3>
+                </div>
 
-                <tr>
-                    <td>Trust</td>
-                    <td>Building long-term relationships with our customers.</td>
-                </tr>
+            </div>
 
-                <tr>
-                    <td>Innovation</td>
-                    <td>Introducing the latest beauty trends and products.</td>
-                </tr>
+        </div>
 
-                <tr>
-                    <td>Customer Satisfaction</td>
-                    <td>Delivering the best shopping experience.</td>
-                </tr>
+    </section>
 
-            </table>
+    <!-- Product Categories -->
+    <section class="max-w-6xl mx-auto py-16 px-6">
 
-        </section>
+        <h2 class="text-3xl font-bold text-center mb-10">
+            Our Product Categories
+        </h2>
 
-        <hr>
+        <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-6">
 
-        <section>
+            <div class="bg-white p-6 rounded-lg shadow text-center">🌸 Skincare</div>
+            <div class="bg-white p-6 rounded-lg shadow text-center">💄 Makeup</div>
+            <div class="bg-white p-6 rounded-lg shadow text-center">💇 Hair Care</div>
+            <div class="bg-white p-6 rounded-lg shadow text-center">🌺 Fragrances</div>
+            <div class="bg-white p-6 rounded-lg shadow text-center">🧴 Body Care</div>
+            <div class="bg-white p-6 rounded-lg shadow text-center">🧔 Men's Grooming</div>
+            <div class="bg-white p-6 rounded-lg shadow text-center">🪞 Beauty Accessories</div>
 
-            <h2>Our Commitment</h2>
+        </div>
 
-            <p>
+    </section>
+
+    <!-- Core Values -->
+    <section class="bg-white py-16">
+
+        <div class="max-w-6xl mx-auto px-6">
+
+            <h2 class="text-3xl font-bold text-center mb-8">
+                Our Core Values
+            </h2>
+
+            <div class="overflow-x-auto">
+
+                <table class="w-full border border-gray-300">
+
+                    <thead class="bg-pink-600 text-white">
+
+                        <tr>
+                            <th class="p-4">Value</th>
+                            <th class="p-4">Description</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr class="border-b">
+                            <td class="p-4 font-semibold">Quality</td>
+                            <td class="p-4">Providing premium and authentic beauty products.</td>
+                        </tr>
+
+                        <tr class="border-b bg-pink-50">
+                            <td class="p-4 font-semibold">Trust</td>
+                            <td class="p-4">Building long-term relationships with customers.</td>
+                        </tr>
+
+                        <tr class="border-b">
+                            <td class="p-4 font-semibold">Innovation</td>
+                            <td class="p-4">Introducing the latest beauty trends.</td>
+                        </tr>
+
+                        <tr class="bg-pink-50">
+                            <td class="p-4 font-semibold">Customer Satisfaction</td>
+                            <td class="p-4">Delivering the best shopping experience.</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Commitment -->
+    <section class="bg-pink-600 text-white py-16">
+
+        <div class="max-w-5xl mx-auto px-6 text-center">
+
+            <h2 class="text-4xl font-bold mb-6">
+                Our Commitment
+            </h2>
+
+            <p class="text-lg leading-8">
                 At Ziva Cosmetics, we believe beauty should inspire confidence.
                 We continuously work to provide safe, reliable, and innovative
-                beauty products that meet the needs of our customers while
-                maintaining exceptional quality and service.
+                beauty products while maintaining exceptional quality and customer service.
             </p>
 
-        </section>
+        </div>
 
-    </main>
-
-    <hr>
+    </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-gray-900 text-white py-10">
 
-        <h3>Ziva Cosmetics</h3>
+        <div class="max-w-6xl mx-auto text-center">
 
-        <p>Premium Beauty Products for Everyone.</p>
+            <h2 class="text-2xl font-bold mb-4">
+                ZIVA COSMETICS
+            </h2>
 
-        <p>Email: support@ziva.com</p>
+            <p class="mb-2">
+                Premium Beauty Products for Everyone
+            </p>
 
-        <p>Phone: +91 9876543210</p>
+            <p>Email: support@ziva.com</p>
 
-        <p>Address: Chennai, Tamil Nadu, India</p>
+            <p>Phone: +91 9876543210</p>
 
-        <p>&copy; 2026 Ziva Cosmetics. All Rights Reserved.</p>
+            <p>Address: Chennai, Tamil Nadu, India</p>
+
+            <p class="mt-5 text-gray-400">
+                © 2026 Ziva Cosmetics. All Rights Reserved.
+            </p>
+
+        </div>
 
     </footer>
 

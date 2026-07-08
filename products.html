@@ -4,183 +4,335 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | Ziva Cosmetics</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
-<header>
+<body class="bg-pink-50 text-gray-800">
 
-<h1>ZIVA COSMETICS</h1>
+    <!-- Header -->
+    <header class="bg-pink-600 shadow-lg">
 
-<nav>
-<a href="index.html">Home</a> |
-<a href="products.html">Products</a> |
-<a href="cart.html">Cart</a> |
-<a href="about.html">About Us</a> |
-<a href="contact.html">Contact Us</a> |
-<a href="login.html">Login</a> |
-<a href="signup.html">Sign Up</a>
-</nav>
+        <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
 
-<hr>
+            <h1 class="text-3xl font-bold text-white">
+                ZIVA COSMETICS
+            </h1>
 
-</header>
+            <nav class="mt-4 md:mt-0">
 
-<main>
+                <ul class="flex flex-wrap gap-6 text-white font-medium">
 
-<h2>Our Beauty Products</h2>
+                    <li><a href="index.html" class="hover:text-pink-200">Home</a></li>
+                    <li><a href="products.html" class="text-pink-200 font-bold">Products</a></li>
+                    <li><a href="cart.html" class="hover:text-pink-200">Cart</a></li>
+                    <li><a href="about.html" class="hover:text-pink-200">About</a></li>
+                    <li><a href="contact.html" class="hover:text-pink-200">Contact</a></li>
+                    <li><a href="login.html" class="hover:text-pink-200">Login</a></li>
+                    <li><a href="signup.html" class="hover:text-pink-200">Sign Up</a></li>
 
-<p>
-Explore our premium collection of skincare, makeup, hair care,
-fragrances, and beauty essentials.
-</p>
+                </ul>
 
-<table border="1" cellpadding="15">
+            </nav>
 
-<tr>
+        </div>
 
-<td align="center">
+    </header>
 
-<img src="./assets/img2.webp" width="150" height="150" alt="Lipstick">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-pink-100 to-pink-200 py-16">
 
-<h3>Matte Lipstick</h3>
+        <div class="max-w-6xl mx-auto text-center px-6">
 
-<p>Brand: Ziva</p>
+            <h2 class="text-5xl font-bold mb-4">
+                Our Beauty Products
+            </h2>
 
-<p>Price: ₹499</p>
+            <p class="text-lg text-gray-700">
+                Explore our premium collection of skincare, makeup, hair care,
+                fragrances, and beauty essentials.
+            </p>
 
-<p>Long-lasting matte finish.</p>
+        </div>
 
-<a href="cart.html">
-<button>Add to Cart</button>
-</a>
+    </section>
 
-</td>
+    <!-- Products -->
+    <section class="max-w-7xl mx-auto py-16 px-6">
 
-<td align="center">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-<img src="./assets/img3.webp" width="150" height="150" alt="Foundation">
+            <!-- Product 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition">
 
-<h3>Liquid Foundation</h3>
+                <img src="./assets/img2.webp"
+                    class="w-full h-64 object-cover"
+                    alt="Matte Lipstick">
 
-<p>Brand: Ziva</p>
+                <div class="p-6">
 
-<p>Price: ₹899</p>
+                    <h3 class="text-2xl font-bold">
+                        Matte Lipstick
+                    </h3>
 
-<p>Perfect skin coverage.</p>
+                    <p class="text-gray-600 mt-2">
+                        Brand: <strong>Ziva</strong>
+                    </p>
 
-<a href="cart.html">
-<button>Add to Cart</button>
-</a>
+                    <p class="text-pink-600 text-xl font-bold mt-2">
+                        ₹499
+                    </p>
 
-</td>
+                    <p class="mt-3 text-gray-700">
+                        Long-lasting matte finish with vibrant color.
+                    </p>
 
-<td align="center">
+                    <a href="cart.html">
+                        <button class="mt-6 w-full bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-lg transition">
+                            Add to Cart
+                        </button>
+                    </a>
 
-<img src="./assets/img4.webp" width="150" height="150" alt="Serum">
+                </div>
 
-<h3>Vitamin C Serum</h3>
+            </div>
 
-<p>Brand: Ziva</p>
+            <!-- Product 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition">
 
-<p>Price: ₹799</p>
+                <img src="./assets/img3.webp"
+                    class="w-full h-64 object-cover"
+                    alt="Liquid Foundation">
 
-<p>Brightens and hydrates skin.</p>
+                <div class="p-6">
 
-<a href="cart.html">
-<button>Add to Cart</button>
-</a>
+                    <h3 class="text-2xl font-bold">
+                        Liquid Foundation
+                    </h3>
 
-</td>
+                    <p class="text-gray-600 mt-2">
+                        Brand: <strong>Ziva</strong>
+                    </p>
 
-</tr>
+                    <p class="text-pink-600 text-xl font-bold mt-2">
+                        ₹899
+                    </p>
 
-<tr>
+                    <p class="mt-3 text-gray-700">
+                        Perfect skin coverage with a smooth natural finish.
+                    </p>
 
-<td align="center">
+                    <a href="cart.html">
+                        <button class="mt-6 w-full bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-lg transition">
+                            Add to Cart
+                        </button>
+                    </a>
 
-<img src="images/perfume.jpg" width="150" height="150" alt="Perfume">
+                </div>
 
-<h3>Luxury Perfume</h3>
+            </div>
 
-<p>Brand: Ziva</p>
+            <!-- Product 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition">
 
-<p>Price: ₹1299</p>
+                <img src="./assets/img4.webp"
+                    class="w-full h-64 object-cover"
+                    alt="Vitamin C Serum">
 
-<p>Premium fragrance for all occasions.</p>
+                <div class="p-6">
 
-<a href="cart.html">
-<button>Add to Cart</button>
-</a>
+                    <h3 class="text-2xl font-bold">
+                        Vitamin C Serum
+                    </h3>
 
-</td>
+                    <p class="text-gray-600 mt-2">
+                        Brand: <strong>Ziva</strong>
+                    </p>
 
-<td align="center">
+                    <p class="text-pink-600 text-xl font-bold mt-2">
+                        ₹799
+                    </p>
 
-<img src="images/shampoo.jpg" width="150" height="150" alt="Shampoo">
+                    <p class="mt-3 text-gray-700">
+                        Brightens, hydrates, and rejuvenates your skin.
+                    </p>
 
-<h3>Herbal Shampoo</h3>
+                    <a href="cart.html">
+                        <button class="mt-6 w-full bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-lg transition">
+                            Add to Cart
+                        </button>
+                    </a>
 
-<p>Brand: Ziva</p>
+                </div>
 
-<p>Price: ₹599</p>
+            </div>
 
-<p>Healthy and silky hair.</p>
+            <!-- Product 4 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition">
 
-<a href="cart.html">
-<button>Add to Cart</button>
-</a>
+                <img src="./assets/perfume.jpg"
+                    class="w-full h-64 object-cover"
+                    alt="Luxury Perfume">
 
-</td>
+                <div class="p-6">
 
-<td align="center">
+                    <h3 class="text-2xl font-bold">Luxury Perfume</h3>
 
-<img src="images/facewash.jpg" width="150" height="150" alt="Face Wash">
+                    <p class="text-gray-600 mt-2">
+                        Brand: <strong>Ziva</strong>
+                    </p>
 
-<h3>Face Wash</h3>
+                    <p class="text-pink-600 text-xl font-bold mt-2">
+                        ₹1299
+                    </p>
 
-<p>Brand: Ziva</p>
+                    <p class="mt-3 text-gray-700">
+                        Premium fragrance for every occasion.
+                    </p>
 
-<p>Price: ₹399</p>
+                    <a href="cart.html">
+                        <button class="mt-6 w-full bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-lg transition">
+                            Add to Cart
+                        </button>
+                    </a>
 
-<p>Fresh and glowing skin.</p>
+                </div>
 
-<a href="cart.html">
-<button>Add to Cart</button>
-</a>
+            </div>
 
-</td>
+            <!-- Product 5 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition">
 
-</tr>
+                <img src="./assets/shampoo.jpg"
+                    class="w-full h-64 object-cover"
+                    alt="Herbal Shampoo">
 
-</table>
+                <div class="p-6">
 
-<br>
+                    <h3 class="text-2xl font-bold">Herbal Shampoo</h3>
 
-<h3>Why Shop With Us?</h3>
+                    <p class="text-gray-600 mt-2">
+                        Brand: <strong>Ziva</strong>
+                    </p>
 
-<ul>
-<li>100% Genuine Products</li>
-<li>Affordable Prices</li>
-<li>Fast Delivery</li>
-<li>Easy Returns</li>
-<li>Secure Payments</li>
-</ul>
+                    <p class="text-pink-600 text-xl font-bold mt-2">
+                        ₹599
+                    </p>
 
-</main>
+                    <p class="mt-3 text-gray-700">
+                        Nourishes hair and keeps it healthy and silky.
+                    </p>
 
-<hr>
+                    <a href="cart.html">
+                        <button class="mt-6 w-full bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-lg transition">
+                            Add to Cart
+                        </button>
+                    </a>
 
-<footer>
+                </div>
 
-<p><strong>Ziva Cosmetics</strong></p>
+            </div>
 
-<p>Email : support@ziva.com</p>
+            <!-- Product 6 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition">
 
-<p>Phone : +91 9876543210</p>
+                <img src="./assets/facewash.jpg"
+                    class="w-full h-64 object-cover"
+                    alt="Face Wash">
 
-<p>&copy; 2026 Ziva Cosmetics. All Rights Reserved.</p>
+                <div class="p-6">
 
-</footer>
+                    <h3 class="text-2xl font-bold">Face Wash</h3>
+
+                    <p class="text-gray-600 mt-2">
+                        Brand: <strong>Ziva</strong>
+                    </p>
+
+                    <p class="text-pink-600 text-xl font-bold mt-2">
+                        ₹399
+                    </p>
+
+                    <p class="mt-3 text-gray-700">
+                        Cleanses deeply for fresh and glowing skin.
+                    </p>
+
+                    <a href="cart.html">
+                        <button class="mt-6 w-full bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-lg transition">
+                            Add to Cart
+                        </button>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Why Shop -->
+    <section class="bg-white py-16">
+
+        <div class="max-w-6xl mx-auto px-6">
+
+            <h2 class="text-4xl font-bold text-center mb-10">
+                Why Shop With Us?
+            </h2>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    ✅
+                    <h3 class="font-semibold mt-3">100% Genuine</h3>
+                </div>
+
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    💰
+                    <h3 class="font-semibold mt-3">Affordable Prices</h3>
+                </div>
+
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    🚚
+                    <h3 class="font-semibold mt-3">Fast Delivery</h3>
+                </div>
+
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    🔄
+                    <h3 class="font-semibold mt-3">Easy Returns</h3>
+                </div>
+
+                <div class="bg-pink-100 rounded-lg p-6 text-center shadow">
+                    🔒
+                    <h3 class="font-semibold mt-3">Secure Payments</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+
+        <div class="max-w-6xl mx-auto text-center">
+
+            <h2 class="text-2xl font-bold mb-4">
+                ZIVA COSMETICS
+            </h2>
+
+            <p>Email: support@ziva.com</p>
+
+            <p>Phone: +91 9876543210</p>
+
+            <p class="mt-5 text-gray-400">
+                © 2026 Ziva Cosmetics. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
 
 </body>
 </html>

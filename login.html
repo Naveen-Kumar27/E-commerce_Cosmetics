@@ -4,145 +4,207 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Ziva Cosmetics</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+
+<body class="bg-pink-50 text-gray-800">
 
     <!-- Header -->
-    <header>
-        <h1>ZIVA COSMETICS</h1>
+    <header class="bg-pink-600 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
 
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="products.html">Products</a> |
-            <a href="cart.html">Cart</a> |
-            <a href="about.html">About Us</a> |
-            <a href="contact.html">Contact Us</a> |
-            <a href="login.html">Login</a> |
-            <a href="signup.html">Sign Up</a>
-        </nav>
+            <h1 class="text-3xl font-bold text-white">
+                ZIVA COSMETICS
+            </h1>
 
-        <hr>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex flex-wrap gap-6 text-white font-medium">
+                    <li><a href="index.html" class="hover:text-pink-200">Home</a></li>
+                    <li><a href="products.html" class="hover:text-pink-200">Products</a></li>
+                    <li><a href="cart.html" class="hover:text-pink-200">Cart</a></li>
+                    <li><a href="about.html" class="hover:text-pink-200">About</a></li>
+                    <li><a href="contact.html" class="hover:text-pink-200">Contact</a></li>
+                    <li><a href="login.html" class="text-pink-200 font-bold">Login</a></li>
+                    <li><a href="signup.html" class="hover:text-pink-200">Sign Up</a></li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
-    <!-- Login Form -->
-    <main>
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-pink-100 to-pink-200 py-16">
 
-        <h2>Login to Your Account</h2>
+        <div class="max-w-4xl mx-auto text-center px-6">
 
-        <p>
-            Welcome back! Please enter your email and password to access your
-            Ziva Cosmetics account.
-        </p>
+            <h2 class="text-5xl font-bold mb-4">
+                Welcome Back!
+            </h2>
 
-        <form action="#" method="post">
+            <p class="text-lg text-gray-700">
+                Login to your Ziva Cosmetics account and continue your beauty journey.
+            </p>
 
-            <table>
+        </div>
 
-                <tr>
-                    <td><label for="email">Email Address</label></td>
-                </tr>
+    </section>
 
-                <tr>
-                    <td>
+    <!-- Login Section -->
+    <section class="py-16 px-6">
+
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+
+            <!-- Login Form -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+
+                <h3 class="text-3xl font-bold text-pink-600 mb-8 text-center">
+                    Login
+                </h3>
+
+                <form class="space-y-6">
+
+                    <div>
+                        <label class="block mb-2 font-semibold">
+                            Email Address
+                        </label>
+
                         <input
                             type="email"
-                            id="email"
-                            name="email"
                             placeholder="Enter your email"
-                            required>
-                    </td>
-                </tr>
+                            required
+                            class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none">
+                    </div>
 
-                <tr>
-                    <td><br></td>
-                </tr>
+                    <div>
+                        <label class="block mb-2 font-semibold">
+                            Password
+                        </label>
 
-                <tr>
-                    <td><label for="password">Password</label></td>
-                </tr>
-
-                <tr>
-                    <td>
                         <input
                             type="password"
-                            id="password"
-                            name="password"
                             placeholder="Enter your password"
-                            required>
-                    </td>
-                </tr>
+                            required
+                            class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none">
+                    </div>
 
-                <tr>
-                    <td><br></td>
-                </tr>
+                    <div class="flex items-center justify-between">
 
-                <tr>
-                    <td>
-                        <input
-                            type="checkbox"
-                            id="remember"
-                            name="remember">
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox">
+                            Remember Me
+                        </label>
 
-                        <label for="remember">Remember Me</label>
-                    </td>
-                </tr>
+                        <a href="forgot-password.html"
+                           class="text-pink-600 hover:underline">
+                            Forgot Password?
+                        </a>
 
-                <tr>
-                    <td><br></td>
-                </tr>
+                    </div>
 
-                <tr>
-                    <td>
-                        <input type="submit" value="Login">
-                        <input type="reset" value="Clear">
-                    </td>
-                </tr>
+                    <div class="flex gap-4">
 
-            </table>
+                        <button
+                            type="submit"
+                            class="flex-1 bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-lg transition">
+                            Login
+                        </button>
 
-        </form>
+                        <button
+                            type="reset"
+                            class="flex-1 bg-gray-500 hover:bg-gray-600 text-white py-3 rounded-lg transition">
+                            Clear
+                        </button>
 
-        <br>
+                    </div>
 
-        <p>
-            <a href="forgot-password.html">Forgot Password?</a>
-        </p>
+                </form>
 
-        <p>
-            Don't have an account?
-            <a href="signup.html">Create Account</a>
-        </p>
+                <p class="text-center mt-6">
+                    Don't have an account?
+                    <a href="signup.html"
+                       class="text-pink-600 font-semibold hover:underline">
+                        Create Account
+                    </a>
+                </p>
 
-        <hr>
+            </div>
 
-        <h3>Why Login?</h3>
+            <!-- Benefits -->
+            <div class="space-y-8">
 
-        <ul>
-            <li>View your orders</li>
-            <li>Track product delivery</li>
-            <li>Save your favorite products</li>
-            <li>Manage your shopping cart</li>
-            <li>Checkout faster</li>
-        </ul>
+                <div class="bg-white rounded-xl shadow-lg p-8">
 
-    </main>
+                    <h3 class="text-2xl font-bold text-pink-600 mb-6">
+                        Why Login?
+                    </h3>
 
-    <hr>
+                    <ul class="space-y-4 text-gray-700">
+
+                        <li>📦 View your orders</li>
+
+                        <li>🚚 Track product delivery</li>
+
+                        <li>❤️ Save your favorite products</li>
+
+                        <li>🛒 Manage your shopping cart</li>
+
+                        <li>⚡ Checkout faster</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bg-pink-600 text-white rounded-xl shadow-lg p-8">
+
+                    <h3 class="text-2xl font-bold mb-4">
+                        New to Ziva?
+                    </h3>
+
+                    <p class="mb-6">
+                        Create an account to enjoy faster checkout, order tracking,
+                        exclusive offers, and personalized recommendations.
+                    </p>
+
+                    <a href="signup.html">
+                        <button class="bg-white text-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                            Create Account
+                        </button>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-gray-900 text-white py-10">
 
-        <p><strong>Ziva Cosmetics</strong></p>
+        <div class="max-w-6xl mx-auto text-center">
 
-        <p>Premium Beauty Products for Everyone</p>
+            <h2 class="text-2xl font-bold mb-4">
+                ZIVA COSMETICS
+            </h2>
 
-        <p>Email: support@ziva.com</p>
+            <p class="mb-2">
+                Premium Beauty Products for Everyone
+            </p>
 
-        <p>Phone: +91 9876543210</p>
+            <p>Email: support@ziva.com</p>
 
-        <p>Address: Chennai, Tamil Nadu, India</p>
+            <p>Phone: +91 9876543210</p>
 
-        <p>&copy; 2026 Ziva Cosmetics. All Rights Reserved.</p>
+            <p>Address: Chennai, Tamil Nadu, India</p>
+
+            <p class="mt-5 text-gray-400">
+                © 2026 Ziva Cosmetics. All Rights Reserved.
+            </p>
+
+        </div>
 
     </footer>
 

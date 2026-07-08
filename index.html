@@ -4,138 +4,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ziva Cosmetics | Home</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-pink-50 text-gray-800">
 
-<header>
-    <h1>ZIVA COSMETICS</h1>
+    <!-- Header -->
+    <header class="bg-pink-600 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
 
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="products.html">Products</a> |
-        <a href="cart.html">Cart</a> |
-        <a href="about.html">About</a> |
-        <a href="contact.html">Contact</a> |
-        <a href="login.html">Login</a> |
-        <a href="signup.html">Sign Up</a>
-    </nav>
+            <h1 class="text-3xl font-bold tracking-wide">
+                ZIVA COSMETICS
+            </h1>
 
-    <hr>
-</header>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex flex-wrap gap-6 text-lg font-medium">
+                    <li><a href="index.html" class="hover:text-pink-200">Home</a></li>
+                    <li><a href="products.html" class="hover:text-pink-200">Products</a></li>
+                    <li><a href="cart.html" class="hover:text-pink-200">Cart</a></li>
+                    <li><a href="About.html" class="hover:text-pink-200">About</a></li>
+                    <li><a href="contact.html" class="hover:text-pink-200">Contact</a></li>
+                    <li><a href="login.html" class="hover:text-pink-200">Login</a></li>
+                    <li><a href="signup.html" class="hover:text-pink-200">Sign Up</a></li>
+                </ul>
+            </nav>
 
-<main>
+        </div>
+    </header>
 
-<section>
-    <h2>Welcome to Ziva Cosmetics</h2>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-pink-100 to-pink-200 py-20">
 
-    <p>
-        Discover premium skincare, makeup, hair care, fragrances,
-        and beauty products at affordable prices.
-    </p>
+        <div class="max-w-7xl mx-auto text-center px-6">
 
-    <a href="products.html">
-        <button>Shop Now</button>
-    </a>
+            <h2 class="text-5xl font-bold mb-6">
+                Welcome to Ziva Cosmetics
+            </h2>
 
-    <hr>
-</section>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+                Discover premium skincare, makeup, hair care, fragrances,
+                and beauty products at affordable prices.
+            </p>
 
-<section>
+            <a href="products.html">
+                <button class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-lg shadow-lg transition duration-300">
+                    Shop Now
+                </button>
+            </a>
 
-<h2>Shop by Category</h2>
+        </div>
 
-<ul>
-    <li>Skincare</li>
-    <li>Makeup</li>
-    <li>Hair Care</li>
-    <li>Fragrances</li>
-    <li>Body Care</li>
-</ul>
+    </section>
 
-<hr>
+    <!-- Categories -->
+    <section class="max-w-7xl mx-auto py-16 px-6">
 
-</section>
+        <h2 class="text-3xl font-bold text-center mb-10">
+            Shop by Category
+        </h2>
 
-<section>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
 
-<h2>Featured Products</h2>
+            <div class="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+                🌸
+                <h3 class="font-semibold mt-3">Skincare</h3>
+            </div>
 
-<table border="1" cellpadding="10">
+            <div class="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+                💄
+                <h3 class="font-semibold mt-3">Makeup</h3>
+            </div>
 
-<tr>
+            <div class="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+                💇
+                <h3 class="font-semibold mt-3">Hair Care</h3>
+            </div>
 
-<td>
-<img src="./assets/img2.webp" width="150" alt="Lipstick">
+            <div class="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+                🌺
+                <h3 class="font-semibold mt-3">Fragrances</h3>
+            </div>
 
-<h3>Matte Lipstick</h3>
+            <div class="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition">
+                🧴
+                <h3 class="font-semibold mt-3">Body Care</h3>
+            </div>
 
-<p>₹499</p>
+        </div>
 
-<a href="cart.html">
-<button>Add to Cart</button>
-</a>
+    </section>
 
-</td>
+    <!-- Featured Products -->
+    <section class="bg-white py-16">
 
-<td>
+        <div class="max-w-7xl mx-auto px-6">
 
-<img src="./assets/img3.webp" width="150" alt="Foundation">
+            <h2 class="text-3xl font-bold text-center mb-12">
+                Featured Products
+            </h2>
 
-<h3>Liquid Foundation</h3>
+            <div class="grid md:grid-cols-3 gap-8">
 
-<p>₹899</p>
+                <!-- Product 1 -->
+                <div class="bg-pink-50 rounded-xl shadow-lg p-6 text-center hover:scale-105 transition">
 
-<a href="cart.html">
-<button>Add to Cart</button>
-</a>
+                    <img src="./assets/img2.webp"
+                        class="w-48 h-48 mx-auto object-cover rounded-lg">
 
-</td>
+                    <h3 class="text-xl font-semibold mt-5">
+                        Matte Lipstick
+                    </h3>
 
-<td>
+                    <p class="text-pink-600 text-xl font-bold mt-2">
+                        ₹499
+                    </p>
 
-<img src="./assets/img4.webp" width="150" alt="Serum">
+                    <a href="cart.html">
+                        <button class="mt-5 bg-pink-600 text-white px-6 py-2 rounded-lg hover:bg-pink-700">
+                            Add to Cart
+                        </button>
+                    </a>
 
-<h3>Vitamin C Serum</h3>
+                </div>
 
-<p>₹799</p>
+                <!-- Product 2 -->
+                <div class="bg-pink-50 rounded-xl shadow-lg p-6 text-center hover:scale-105 transition">
 
-<a href="cart.html">
-<button>Add to Cart</button>
-</a>
+                    <img src="./assets/img3.webp"
+                        class="w-48 h-48 mx-auto object-cover rounded-lg">
 
-</td>
+                    <h3 class="text-xl font-semibold mt-5">
+                        Liquid Foundation
+                    </h3>
 
-</tr>
+                    <p class="text-pink-600 text-xl font-bold mt-2">
+                        ₹899
+                    </p>
 
-</table>
+                    <a href="cart.html">
+                        <button class="mt-5 bg-pink-600 text-white px-6 py-2 rounded-lg hover:bg-pink-700">
+                            Add to Cart
+                        </button>
+                    </a>
 
-<hr>
+                </div>
 
-</section>
+                <!-- Product 3 -->
+                <div class="bg-pink-50 rounded-xl shadow-lg p-6 text-center hover:scale-105 transition">
 
-<section>
+                    <img src="./assets/img4.webp"
+                        class="w-48 h-48 mx-auto object-cover rounded-lg">
 
-<h2>Today's Offer</h2>
+                    <h3 class="text-xl font-semibold mt-5">
+                        Vitamin C Serum
+                    </h3>
 
-<h3>Flat 30% OFF</h3>
+                    <p class="text-pink-600 text-xl font-bold mt-2">
+                        ₹799
+                    </p>
 
-<p>Coupon Code: <b>ZIVA30</b></p>
+                    <a href="cart.html">
+                        <button class="mt-5 bg-pink-600 text-white px-6 py-2 rounded-lg hover:bg-pink-700">
+                            Add to Cart
+                        </button>
+                    </a>
 
-</section>
+                </div>
 
-</main>
+            </div>
 
-<hr>
+        </div>
 
-<footer>
+    </section>
 
-<p>© 2026 Ziva Cosmetics</p>
+    <!-- Offer -->
+    <section class="bg-pink-600 text-white py-16">
 
-<p>Email: support@ziva.com</p>
+        <div class="max-w-4xl mx-auto text-center">
 
-<p>Phone: +91 9876543210</p>
+            <h2 class="text-4xl font-bold mb-4">
+                Today's Offer
+            </h2>
 
-</footer>
+            <h3 class="text-3xl font-semibold">
+                Flat 30% OFF
+            </h3>
+
+            <p class="text-xl mt-4">
+                Use Coupon Code:
+                <span class="bg-white text-pink-600 px-4 py-2 rounded font-bold">
+                    ZIVA30
+                </span>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+
+        <div class="max-w-7xl mx-auto text-center">
+
+            <h2 class="text-2xl font-bold mb-3">
+                ZIVA COSMETICS
+            </h2>
+
+            <p>© 2026 Ziva Cosmetics. All Rights Reserved.</p>
+
+            <p class="mt-2">
+                Email: support@ziva.com
+            </p>
+
+            <p>
+                Phone: +91 9876543210
+            </p>
+
+        </div>
+
+    </footer>
 
 </body>
 </html>
