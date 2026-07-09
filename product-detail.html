@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Ziva Cosmetics</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-pink-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-pink-600 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold text-white">
+                ZIVA COSMETICS
+            </h1>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex flex-wrap gap-6 text-white font-medium">
+                    <li><a href="index.html" class="hover:text-pink-200">Home</a></li>
+                    <li><a href="products.html" class="hover:text-pink-200">Products</a></li>
+                    <li><a href="cart.html" class="hover:text-pink-200">Cart</a></li>
+                    <li><a href="about.html" class="hover:text-pink-200">About</a></li>
+                    <li><a href="contact.html" class="hover:text-pink-200">Contact</a></li>
+                    <li><a href="faq.html" class="hover:text-pink-200">FAQ</a></li>
+                    <li><a href="login.html" class="hover:text-pink-200">Login</a></li>
+                    <li><a href="signup.html" class="hover:text-pink-200">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-12 w-full" id="productContainer">
+        <!-- Back Link -->
+        <a href="products.html" class="text-pink-600 font-semibold hover:underline flex items-center gap-2 mb-8">
+            ← Back to All Products
+        </a>
+
+        <!-- Loading State / Fallback -->
+        <div id="fallbackState" class="hidden text-center py-20 bg-white rounded-2xl shadow-md p-8">
+            <h2 class="text-3xl font-bold text-pink-600 mb-4">Product Not Found</h2>
+            <p class="text-gray-600 mb-6">Sorry, we couldn't find the product you're looking for.</p>
+            <a href="products.html">
+                <button class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                    Back to Shop
+                </button>
+            </a>
+        </div>
+
+        <!-- Product Grid (Dynamic) -->
+        <div id="productGrid" class="grid md:grid-cols-2 gap-12 bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            
+            <!-- Left: Image Gallery -->
+            <div class="flex flex-col gap-4">
+                <div class="bg-pink-50 rounded-xl overflow-hidden border border-pink-100 flex items-center justify-center">
+                    <img id="productImage" src="" alt="" class="w-full h-96 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+
+            <!-- Right: Product Details -->
+            <div class="flex flex-col justify-between">
+                <div>
+                    <!-- Title -->
+                    <h2 id="productName" class="text-4xl font-extrabold text-gray-900 mb-2">Product Name</h2>
+                    
+                    <!-- Rating and Reviews -->
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="flex text-yellow-400 font-bold" id="productStars">
+                            ★★★★★
+                        </div>
+                        <span id="productRatingVal" class="font-bold text-gray-800">4.8</span>
+                        <span class="text-gray-400">|</span>
+                        <span class="text-gray-600 cursor-pointer hover:text-pink-600 hover:underline">(124 Customer Reviews)</span>
+                    </div>
+
+                    <!-- Price -->
+                    <p id="productPrice" class="text-3xl font-bold text-pink-600 mb-6">₹000</p>
+                    
+                    <!-- Short Description -->
+                    <p id="productDesc" class="text-gray-700 leading-relaxed mb-6">Product Description</p>
+                    
+                    <!-- Info Badges -->
+                    <div class="grid grid-cols-2 gap-4 mb-8 text-sm">
+                        <div class="bg-pink-50 text-pink-700 p-3 rounded-lg font-semibold border border-pink-100">
+                            🌿 100% Organic & Vegan
+                        </div>
+                        <div class="bg-pink-50 text-pink-700 p-3 rounded-lg font-semibold border border-pink-100">
+                            🐰 Cruelty-Free certified
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="border-t border-gray-150 pt-6 space-y-4">
+                    <div class="flex items-center gap-4">
+                        <label class="font-semibold text-gray-700">Quantity:</label>
+                        <select id="quantitySelect" class="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-pink-500 focus:border-pink-500 outline-none">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <button id="addToCartBtn" class="flex-1 bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 shadow-md">
+                            Add to Cart
+                        </button>
+                        <button class="bg-pink-100 hover:bg-pink-200 text-pink-600 font-bold py-3 px-4 rounded-lg transition">
+                            ❤️
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Details Tabs -->
+        <section class="mt-12 bg-white rounded-2xl shadow-lg p-8 md:p-12">
+            <!-- Tab Headers -->
+            <div class="flex border-b border-gray-200 gap-8 mb-6 overflow-x-auto">
+                <button class="tab-btn pb-3 text-lg font-bold border-b-2 border-pink-600 text-pink-600 focus:outline-none" onclick="switchTab(event, 'descriptionTab')">
+                    Description
+                </button>
+                <button class="tab-btn pb-3 text-lg font-semibold text-gray-500 hover:text-pink-600 focus:outline-none" onclick="switchTab(event, 'ingredientsTab')">
+                    Ingredients
+                </button>
+                <button class="tab-btn pb-3 text-lg font-semibold text-gray-500 hover:text-pink-600 focus:outline-none" onclick="switchTab(event, 'howToUseTab')">
+                    How To Use
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="descriptionTab" class="tab-content text-gray-700 leading-relaxed space-y-4">
+                <p id="tabDesc">Product description content.</p>
+                <p class="font-semibold text-pink-600">Skin Suitability: <span id="tabSuitability" class="text-gray-700 font-normal">All skin types</span></p>
+            </div>
+
+            <div id="ingredientsTab" class="tab-content hidden text-gray-700 leading-relaxed">
+                <p id="tabIngredients">Product ingredients list.</p>
+            </div>
+
+            <div id="howToUseTab" class="tab-content hidden text-gray-700 leading-relaxed">
+                <p id="tabHowToUse">Product instructions of usage.</p>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Panel -->
+        <section class="mt-12 bg-white rounded-2xl shadow-lg p-8 md:p-12">
+            <h3 class="text-2xl font-bold mb-6">Customer Testimonials</h3>
+            <div class="space-y-6">
+                <!-- Review 1 -->
+                <div class="border-b border-gray-150 pb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-gray-800">Ananya R.</span>
+                        <span class="text-sm text-gray-400">July 2, 2026</span>
+                    </div>
+                    <div class="flex text-yellow-400 mb-2">★★★★★</div>
+                    <p class="text-gray-600">Absolutely love this product! The quality is unmatched and it fits perfectly into my daily routine. Highly recommend Ziva Cosmetics.</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="border-b border-gray-150 pb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-gray-800">Vikram S.</span>
+                        <span class="text-sm text-gray-400">June 28, 2026</span>
+                    </div>
+                    <div class="flex text-yellow-400 mb-2">★★★★★</div>
+                    <p class="text-gray-600">Great purchase! True value for money, skin feels hydrated and refreshed. The shipping was extremely fast too.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-4">ZIVA COSMETICS</h2>
+            <p class="mb-2">Premium Beauty Products for Everyone</p>
+            <p>Email: support@ziva.com</p>
+            <p>Phone: +91 9876543210</p>
+            <p>Address: Chennai, Tamil Nadu, India</p>
+            <p class="mt-5 text-gray-400">© 2026 Ziva Cosmetics. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Success Modal Component -->
+    <div id="cartModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full mx-4 text-center transform scale-90 transition-transform duration-300">
+            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </div>
+            <h4 class="text-2xl font-bold text-gray-800 mb-2">Added to Cart!</h4>
+            <p class="text-gray-600 mb-6" id="cartModalMessage">Item has been successfully added to your cart.</p>
+            <div class="flex gap-4">
+                <button class="flex-1 bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 shadow-md" onclick="window.location.href='cart.html'">
+                    View Cart
+                </button>
+                <button class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg transition duration-300" onclick="closeCartModal()">
+                    Keep Shop
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script to Load Data -->
+    <script>
+        const PRODUCTS_DB = {
+            'matte-lipstick': {
+                name: "Matte Lipstick",
+                price: "₹499",
+                image: "./assets/img2.webp",
+                rating: "4.8",
+                stars: "★★★★★",
+                desc: "Give your lips a rich, vibrant matte finish with our premium long-lasting Matte Lipstick. Infused with vitamin E and nourishing oils to keep your lips hydrated all day without smudging.",
+                ingredients: "Dimethicone, Silica, Ozokerite, Microcrystalline Wax, Vitamin E, Jojoba Oil, Titanium Dioxide, Iron Oxides.",
+                howToUse: "Exfoliate lips before applying. Apply directly to your lips starting from the center and moving outwards to the corners.",
+                suitability: "Suitable for all skin tones."
+            },
+            'liquid-foundation': {
+                name: "Liquid Foundation",
+                price: "₹899",
+                image: "./assets/img3.webp",
+                rating: "4.7",
+                stars: "★★★★☆",
+                desc: "Achieve a flawless, natural complexion with Ziva Liquid Foundation. This lightweight, breathable formula blends seamlessly into your skin to provide buildable medium-to-full coverage with a dewy, non-greasy finish.",
+                ingredients: "Water, Cyclopentasiloxane, Glycerin, Talc, Mineral Oil, Shea Butter, Aloe Vera Extract, Fragrance.",
+                howToUse: "Apply a small amount using a beauty blender, foundation brush, or fingers, starting at the center of the face and blending outwards.",
+                suitability: "Perfect for normal to dry skin types."
+            },
+            'vitamin-c-serum': {
+                name: "Vitamin C Serum",
+                price: "₹799",
+                image: "./assets/img4.webp",
+                rating: "4.9",
+                stars: "★★★★★",
+                desc: "Rejuvenate your skin with Ziva's advanced Vitamin C Serum. Formulated with 15% pure ascorbic acid, hyaluronic acid, and ferulic acid to brighten dark spots, reduce fine lines, and protect against environmental pollutants.",
+                ingredients: "Ascorbic Acid (Vitamin C), Hyaluronic Acid, Ferulic Acid, Aloe Barbadensis Leaf Juice, Green Tea Extract, Phenoxyethanol.",
+                howToUse: "Apply 3-5 drops to clean, dry face and neck in the morning. Pat gently until absorbed, then follow with moisturizer and SPF.",
+                suitability: "Great for all skin types, especially dull or aging skin."
+            },
+            'luxury-perfume': {
+                name: "Luxury Perfume",
+                price: "₹1299",
+                image: "./assets/img1.jpg",
+                rating: "4.8",
+                stars: "★★★★★",
+                desc: "Experience a sense of ultimate luxury with our signature perfume. A refined scent containing exquisite notes of jasmine, warm vanilla, and cedarwood that stays with you all day and night.",
+                ingredients: "Ethanol, Water, Fragrance Oils, Essential Oils, Benzyl Salicylate, Coumarin.",
+                howToUse: "Spray on pulse points: wrists, neck, and behind ears. Avoid rubbing after application to keep the scent structure intact.",
+                suitability: "Gentle on all skin types."
+            },
+            'herbal-shampoo': {
+                name: "Herbal Shampoo",
+                price: "₹599",
+                image: "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=500&auto=format&fit=crop&q=60",
+                rating: "4.6",
+                stars: "★★★★☆",
+                desc: "Nourish your hair and revitalize your scalp with Ziva Herbal Shampoo. Formulated with tea tree, amla, and aloe vera extracts to reduce dandruff, prevent hair fall, and restore a silky, glossy bounce.",
+                ingredients: "Aloe Barbadensis extract, Amla juice, Tea Tree oil, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Water.",
+                howToUse: "Apply to wet hair, massage gently into scalp and lather. Rinse thoroughly. Repeat if needed.",
+                suitability: "Perfect for oily, dry, or normal hair types."
+            },
+            'face-wash': {
+                name: "Face Wash",
+                price: "₹399",
+                image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=500&auto=format&fit=crop&q=60",
+                rating: "4.7",
+                stars: "★★★★☆",
+                desc: "Wash away impurities, oil, and makeup with Ziva Fresh Skin Face Wash. Enriched with natural neem and tea tree leaf extract, it helps control acne breakouts while keeping skin soft, fresh, and hydrated.",
+                ingredients: "Neem Extract, Tea Tree extract, Glycerin, Salicylic Acid, Water, Menthol.",
+                howToUse: "Wet face. Squeeze a small amount onto palms and work into lather. Massage over face in circular motions. Rinse well.",
+                suitability: "Recommended for oily and acne-prone skin."
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Parse query parameter
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id');
+
+            if (!productId || !PRODUCTS_DB[productId]) {
+                document.getElementById('productGrid').classList.add('hidden');
+                document.getElementById('fallbackState').classList.remove('hidden');
+                return;
+            }
+
+            const product = PRODUCTS_DB[productId];
+
+            // Set main content
+            document.title = `${product.name} | Ziva Cosmetics`;
+            document.getElementById('productImage').src = product.image;
+            document.getElementById('productImage').alt = product.name;
+            document.getElementById('productName').textContent = product.name;
+            document.getElementById('productPrice').textContent = product.price;
+            document.getElementById('productDesc').textContent = product.desc;
+            document.getElementById('productRatingVal').textContent = product.rating;
+            document.getElementById('productStars').textContent = product.stars;
+
+            // Set tab content
+            document.getElementById('tabDesc').textContent = product.desc;
+            document.getElementById('tabSuitability').textContent = product.suitability;
+            document.getElementById('tabIngredients').textContent = product.ingredients;
+            document.getElementById('tabHowToUse').textContent = product.howToUse;
+
+            // Wire up Add to Cart
+            const addToCartBtn = document.getElementById('addToCartBtn');
+            addToCartBtn.addEventListener('click', () => {
+                const qty = document.getElementById('quantitySelect').value;
+                showCartModal(`${qty} x ${product.name} successfully added to your cart!`);
+            });
+        });
+
+        // Tab switcher function
+        function switchTab(evt, tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(c => c.classList.add('hidden'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(b => {
+                b.classList.remove('border-b-2', 'border-pink-600', 'text-pink-600', 'font-bold');
+                b.classList.add('text-gray-500', 'font-semibold');
+            });
+
+            document.getElementById(tabId).classList.remove('hidden');
+            evt.currentTarget.classList.add('border-b-2', 'border-pink-600', 'text-pink-600', 'font-bold');
+            evt.currentTarget.classList.remove('text-gray-500', 'font-semibold');
+        }
+
+        // Cart modal helper
+        function showCartModal(msg) {
+            const modal = document.getElementById('cartModal');
+            document.getElementById('cartModalMessage').textContent = msg;
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('.transform').classList.remove('scale-90');
+                modal.querySelector('.transform').classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeCartModal() {
+            const modal = document.getElementById('cartModal');
+            modal.classList.add('opacity-0');
+            modal.querySelector('.transform').classList.remove('scale-100');
+            modal.querySelector('.transform').classList.add('scale-90');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+    </script>
+</body>
+</html>

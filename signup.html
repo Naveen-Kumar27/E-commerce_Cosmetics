@@ -7,6 +7,8 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Central Form Validation -->
+    <script src="js/validation.js" defer></script>
 </head>
 
 <body class="bg-pink-50 text-gray-800">
@@ -29,6 +31,7 @@
                     <li><a href="cart.html" class="hover:text-pink-200">Cart</a></li>
                     <li><a href="about.html" class="hover:text-pink-200">About</a></li>
                     <li><a href="contact.html" class="hover:text-pink-200">Contact</a></li>
+                    <li><a href="faq.html" class="hover:text-pink-200">FAQ</a></li>
                     <li><a href="login.html" class="hover:text-pink-200">Login</a></li>
                     <li><a href="signup.html" class="text-pink-200 font-bold">Sign Up</a></li>
 
@@ -70,7 +73,7 @@
                     Sign Up
                 </h3>
 
-                <form class="space-y-5">
+                <form id="signupForm" class="space-y-5" novalidate>
 
                     <div>
                         <label class="block mb-2 font-semibold">
@@ -79,6 +82,7 @@
 
                         <input
                             type="text"
+                            id="fullName"
                             placeholder="Enter your full name"
                             required
                             class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none">
@@ -91,6 +95,7 @@
 
                         <input
                             type="email"
+                            id="email"
                             placeholder="Enter your email"
                             required
                             class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none">
@@ -103,6 +108,7 @@
 
                         <input
                             type="tel"
+                            id="mobile"
                             placeholder="Enter your mobile number"
                             required
                             class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none">
@@ -115,6 +121,7 @@
 
                         <input
                             type="date"
+                            id="dob"
                             class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none">
                     </div>
 
@@ -127,17 +134,17 @@
                         <div class="flex gap-6">
 
                             <label class="flex items-center gap-2">
-                                <input type="radio" name="gender">
+                                <input type="radio" name="gender" value="male">
                                 Male
                             </label>
 
                             <label class="flex items-center gap-2">
-                                <input type="radio" name="gender">
+                                <input type="radio" name="gender" value="female">
                                 Female
                             </label>
 
                             <label class="flex items-center gap-2">
-                                <input type="radio" name="gender">
+                                <input type="radio" name="gender" value="other">
                                 Other
                             </label>
 
@@ -153,6 +160,7 @@
 
                         <input
                             type="password"
+                            id="password"
                             placeholder="Create a password"
                             required
                             class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none">
@@ -167,6 +175,7 @@
 
                         <input
                             type="password"
+                            id="confirmPassword"
                             placeholder="Confirm your password"
                             required
                             class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none">
@@ -181,6 +190,7 @@
 
                         <textarea
                             rows="4"
+                            id="address"
                             placeholder="Enter your address"
                             class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none"></textarea>
 
@@ -188,7 +198,7 @@
 
                     <label class="flex items-center gap-2">
 
-                        <input type="checkbox" required>
+                        <input type="checkbox" id="terms" required>
 
                         I agree to the
                         <span class="text-pink-600 font-semibold">

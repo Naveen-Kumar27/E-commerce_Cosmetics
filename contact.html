@@ -7,6 +7,8 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Central Form Validation -->
+    <script src="js/validation.js" defer></script>
 </head>
 
 <body class="bg-pink-50 text-gray-800">
@@ -26,6 +28,7 @@
                     <li><a href="cart.html" class="hover:text-pink-200">Cart</a></li>
                     <li><a href="about.html" class="hover:text-pink-200">About</a></li>
                     <li><a href="contact.html" class="text-pink-200 font-bold">Contact</a></li>
+                    <li><a href="faq.html" class="hover:text-pink-200">FAQ</a></li>
                     <li><a href="login.html" class="hover:text-pink-200">Login</a></li>
                     <li><a href="signup.html" class="hover:text-pink-200">Sign Up</a></li>
                 </ul>
@@ -63,12 +66,13 @@
                     Send Us a Message
                 </h3>
 
-                <form class="space-y-6">
+                <form id="contactForm" class="space-y-6" novalidate>
 
                     <div>
                         <label class="block mb-2 font-semibold">Full Name</label>
                         <input
                             type="text"
+                            id="fullName"
                             placeholder="Enter your full name"
                             class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none"
                             required>
@@ -78,6 +82,7 @@
                         <label class="block mb-2 font-semibold">Email Address</label>
                         <input
                             type="email"
+                            id="email"
                             placeholder="Enter your email"
                             class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none"
                             required>
@@ -87,6 +92,7 @@
                         <label class="block mb-2 font-semibold">Mobile Number</label>
                         <input
                             type="tel"
+                            id="mobile"
                             placeholder="Enter your mobile number"
                             class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none"
                             required>
@@ -96,6 +102,7 @@
                         <label class="block mb-2 font-semibold">Subject</label>
                         <input
                             type="text"
+                            id="subject"
                             placeholder="Enter subject"
                             class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none"
                             required>
@@ -105,6 +112,7 @@
                         <label class="block mb-2 font-semibold">Message</label>
                         <textarea
                             rows="6"
+                            id="message"
                             placeholder="Write your message here..."
                             class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-pink-500 outline-none"
                             required></textarea>
@@ -210,6 +218,7 @@
                         <li><a href="products.html" class="text-pink-600 hover:underline">🛍 Products</a></li>
                         <li><a href="cart.html" class="text-pink-600 hover:underline">🛒 Shopping Cart</a></li>
                         <li><a href="about.html" class="text-pink-600 hover:underline">ℹ About Us</a></li>
+                        <li><a href="faq.html" class="text-pink-600 hover:underline">❓ FAQ</a></li>
                         <li><a href="login.html" class="text-pink-600 hover:underline">🔑 Login</a></li>
                         <li><a href="signup.html" class="text-pink-600 hover:underline">👤 Sign Up</a></li>
 
